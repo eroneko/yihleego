@@ -1,0 +1,8 @@
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopDAL\bin\Debug\MyBookShopDAL.dll.config
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopDAL\bin\Debug\MyBookShopDAL.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopDAL\bin\Debug\MyBookShopDAL.pdb
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopDAL\bin\Debug\MyBookShopModel.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopDAL\bin\Debug\MyBookShopModel.pdb
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopDAL\obj\Debug\MyBookShopDAL.csprojResolveAssemblyReference.cache
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopDAL\obj\Debug\MyBookShopDAL.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopDAL\obj\Debug\MyBookShopDAL.pdb

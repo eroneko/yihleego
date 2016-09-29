@@ -1,0 +1,11 @@
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\bin\WebApplication1.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\bin\WebApplication1.pdb
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\bin\MyBookShopBLL.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\bin\MyBookShopModel.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\bin\MyBookShopDAL.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\bin\MyBookShopBLL.pdb
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\bin\MyBookShopModel.pdb
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\bin\MyBookShopDAL.pdb
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\WebApplication1\obj\Debug\WebApplication1.pdb

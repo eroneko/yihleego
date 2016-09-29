@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="第三波书城"  description="第三波书城">
+    <siteMapNode url="~/Main.aspx" title="图书浏览"  description="图书浏览">
+      <siteMapNode  url="~/bookDetail.aspx" title="图书详情"  description="图书详情" />
+    </siteMapNode>
+    <siteMapNode url="" title="用户管理"  description="用户管理" >
+      <siteMapNode url="~/Users/LoginForm.aspx" title="用户登录"  description="用户登录" />
+      <siteMapNode url="~/Users/RegisterForm.aspx" title="用户注册"  description="用户注册" />
+    </siteMapNode>
+    <siteMapNode url="~/Cart.aspx" title="购物车"  description="" />
+    <siteMapNode url="~/Search.aspx" title="图书搜索"  description="" />
+    <siteMapNode url="" title="后台管理"  description="">
+      <siteMapNode url="~/Admin/AddBook.aspx" title="添加书本"  description="添加书本" />
+      
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

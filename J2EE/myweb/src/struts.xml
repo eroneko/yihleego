@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory"
+		value="org.apache.struts2.spring.StrutsSpringObjectFactory"></constant>
+	<package name="yihleego" extends="struts-default">
+
+		<action name="getSong" class="MusicdiscoverAction" method="getSong">
+			<result name="success">forward.jsp</result>
+		</action>
+		
+		<action name="index" class="MainlistAction" method="index">
+			<result name="success">index.jsp</result>
+		</action>
+		<action name="page" class="MainlistAction" method="indexByPage">
+			<result name="success">index.jsp</result>
+		</action>
+		
+		<action name="doEmail" class="MainlistAction" method="doEmail">
+			<result name="success" >toIndex.jsp</result>
+			<result name="error" >login_form.jsp</result>
+		</action>
+		
+		
+		<action name="itemDetail" class="MainlistAction" method="detail">
+			<result name="success">itemDetail.jsp</result>
+		</action>
+		<action name="leaveComment" class="MainlistAction" method="leaveComment">
+			<result name="success" >toDetail.jsp</result>
+			<result name="error" >login_form.jsp</result>
+		</action>
+		
+		
+		
+		
+		 
+		<action name="login" class="MainlistAction" method="login">
+			<result name="success" >toIndex.jsp</result>
+			<result name="input">login_form.jsp</result>
+			<result name="verifyemail">verify_form.jsp</result>
+		</action>
+		<action name="logout" class="MainlistAction" method="logout">
+			<result name="success">toIndex.jsp</result>
+		</action>
+		<action name="register" class="MainlistAction" method="register">
+			<result name="success">toIndex.jsp</result>
+			<result name="verifyemail">verify_form.jsp</result>
+			<result name="error">register_form.jsp</result>
+		</action>
+		<action name="checkemailverifycode" class="MainlistAction" method="checkemailverifycode">
+			<result name="success">toIndex.jsp</result>
+			<result name="input">verify_form.jsp</result>
+		</action>
+		<action name="toUserManager" class="MainlistAction" method="toUserManager">
+			<result name="success" >userManager.jsp</result>
+			<result name="error" >login_form.jsp</result>
+		</action>
+		<action name="toEditUser" class="MainlistAction" method="toEditUser">
+			<result name="success" >userForm.jsp</result>
+			<result name="error" >login_form.jsp</result>
+		</action>
+		<action name="editUser" class="MainlistAction" method="editUser">
+			<result name="success" >toIndex.jsp</result>
+			<result name="error" >login_form.jsp</result>
+			<result name="input" >userForm.jsp</result>
+		</action>
+		<action name="getUserComments" class="MainlistAction" method="getUserComments">
+			<result name="success" >userComments.jsp</result>
+			<result name="error" >login_form.jsp</result>
+		</action>
+	</package>
+</struts>    

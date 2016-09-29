@@ -1,0 +1,10 @@
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopBLL\bin\Debug\MyBookShopBLL.dll.config
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopBLL\bin\Debug\MyBookShopBLL.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopBLL\bin\Debug\MyBookShopBLL.pdb
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopBLL\bin\Debug\MyBookShopDAL.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopBLL\bin\Debug\MyBookShopModel.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopBLL\bin\Debug\MyBookShopDAL.pdb
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopBLL\bin\Debug\MyBookShopModel.pdb
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopBLL\obj\Debug\MyBookShopBLL.csprojResolveAssemblyReference.cache
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopBLL\obj\Debug\MyBookShopBLL.dll
+C:\Users\YihLeego\documents\visual studio 2012\Projects\ch4\MyBookShopBLL\obj\Debug\MyBookShopBLL.pdb

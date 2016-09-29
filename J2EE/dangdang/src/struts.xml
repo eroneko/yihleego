@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory"
+		value="org.apache.struts2.spring.StrutsSpringObjectFactory"></constant>
+	<package name="dangdang" extends="struts-default">
+		<action name="register" class="UserAction" method="addUser">
+			<result name="success">main.jsp</result>
+			<result name="verifyemail">verify_form.jsp</result>
+			<result name="error">register_form.jsp</result>
+		</action>
+		<action name="login" class="UserAction" method="login">
+			<result name="success">main.jsp</result>
+			<result name="verifyemail">verify_form.jsp</result>
+			<result name="input">login_form.jsp</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+		<action name="loginvalidateError" class="UserAction" method="loginvalidateError">
+			<result name="success">login_form.jsp</result>
+		</action>
+		<action name="registervalidateError" class="UserAction"
+			method="registervalidateError">
+			<result name="success">register_form.jsp</result>
+		</action>
+		<action name="logout" class="UserAction" method="logout">
+			<result name="success">main.jsp</result>
+		</action>
+
+		<action name="toUpdateUser" class="UserAction" method="toUpdateUser">
+			<result name="success">editUser.jsp</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+		<action name="updateuser" class="UserAction" method="updateuser">
+			<result name="success">main.jsp</result>
+			<result name="error">login_form.jsp</result>
+			<result name="input">editUser.jsp</result>
+		</action>
+
+
+		<action name="addemailverifycode" class="UserAction" method="addemailverifycode">
+			<result name="success">main.jsp</result>
+			<result name="input">verify_form.jsp</result>
+		</action>
+		<action name="showlist" class="CategoryAction" method="showlist">
+			<result name="success">main.jsp</result>
+		</action>
+		<action name="titlelist" class="CategoryAction" method="titlelist">
+			<result name="success">main.jsp</result>
+		</action>
+
+		<action name="booklist" class="CategoryAction" method="booklist">
+			<result name="success">book_list.jsp</result>
+		</action>
+		<action name="bookdetail" class="CategoryAction" method="bookdetail">
+			<result name="success">book_detail.jsp</result>
+		</action>
+		<action name="newlist" class="ProductAction" method="newlist">
+			<result name="success">new.jsp</result>
+		</action>
+		<action name="addcart" class="CartAction" method="addcart">
+			<result name="success">addSuccess.jsp</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+		<action name="showcart" class="CartAction" method="showcart">
+			<result name="success">Cart.jsp</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+
+		<action name="deletecart" class="CartAction" method="deletecart">
+			<result name="success" type="redirectAction">showcart</result>
+		</action>
+		<action name="deleteallcart" class="CartAction" method="deleteallcart">
+			<result name="success" type="redirectAction">showcart</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+		<action name="showReceiveAddress" class="PurchaseAction"
+			method="showReceiveAddress">
+			<result name="success">address_form.jsp</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+			<action name="myReceiveAddress" class="PurchaseAction" method="myReceiveAddress">
+			<result name="success">myaddress_form.jsp</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+		<action name="addReceiveAddress" class="PurchaseAction" method="addReceiveAddress">
+			<result name="success" type="redirectAction">showReceiveAddress</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+		<action name="addMyReceiveAddress" class="PurchaseAction" method="addMyReceiveAddress">
+			<result name="success" type="redirectAction">myReceiveAddress</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+	
+		
+		<action name="placeOrder" class="PurchaseAction" method="placeOrder">
+			<result name="success" type="redirectAction">orderList</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+		<action name="orderList" class="PurchaseAction" method="orderList">
+			<result name="success">order_list.jsp</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+		<action name="itemList" class="PurchaseAction" method="itemList">
+			<result name="success">item_list.jsp</result>
+			<result name="error">login_form.jsp</result>
+		</action>
+
+	</package>
+</struts>    
