@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/dangdang">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="admin"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>po/DOrder.hbm.xml</value>
+				<value>po/DItem.hbm.xml</value>
+				<value>po/DReceiveAddress.hbm.xml</value>
+				<value>po/DCategory.hbm.xml</value>
+				<value>po/DProduct.hbm.xml</value>
+				<value>po/DBook.hbm.xml</value>
+				<value>po/DCategoryProduct.hbm.xml</value>
+				<value>po/DUser.hbm.xml</value>
+				<value>po/DCart.hbm.xml</value></list>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<bean id="DOrderDAO" class="dao.DOrderDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrderService" class="service.OrderService">
+		<property name="orderDAO" ref="DOrderDAO" />
+	</bean>
+	
+	
+	<bean id="DItemDAO" class="dao.DItemDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ItemService" class="service.ItemService">
+		<property name="itemDAO" ref="DItemDAO" />
+	</bean>
+	
+	
+	<bean id="DReceiveAddressDAO" class="dao.DReceiveAddressDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ReceiveAddressService" class="service.ReceiveAddressService">
+		<property name="receiveAddressDAO" ref="DReceiveAddressDAO" />
+	</bean>
+	
+	
+	<bean id="DCategoryDAO" class="dao.DCategoryDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CategoryService" class="service.CategoryService">
+		<property name="categoryDAO" ref="DCategoryDAO" />
+	</bean>
+	<bean id="CategoryAction" class="action.CategoryAction">
+		<property name="categoryService" ref="CategoryService" />
+		<property name="productService" ref="ProductService" />
+	</bean>
+	
+	
+	
+	<bean id="DProductDAO" class="dao.DProductDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProductService" class="service.ProductService">
+		<property name="productDAO" ref="DProductDAO" />
+	</bean>
+	<bean id="ProductAction" class="action.ProductAction">
+		<property name="productService" ref="ProductService" />
+	</bean> 
+	
+
+	
+	
+	
+	
+	<bean id="DBookDAO" class="dao.DBookDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="DCategoryProductDAO" class="dao.DCategoryProductDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="DUserDAO" class="dao.DUserDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UserService" class="service.UserService">
+		<property name="userDAO" ref="DUserDAO" />
+	</bean>
+	<bean id="UserAction" class="action.UserAction">
+		<property name="userService" ref="UserService" />
+	</bean>
+	
+	<bean id="DCartDAO" class="dao.DCartDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CartService" class="service.CartService">
+		<property name="cartDAO" ref="DCartDAO" />
+	</bean>
+	<bean id="CartAction" class="action.CartAction">
+		<property name="cartService" ref="CartService"></property>
+		<property name="productService" ref="ProductService"></property>
+	</bean> 
+	
+	<bean id="PurchaseAction" class="action.PurchaseAction">
+		<property name="cartService" ref="CartService"></property>
+		<property name="userService" ref="UserService"></property>
+		<property name="receiveAddressService" ref="ReceiveAddressService"></property>
+		<property name="orderService" ref="OrderService"></property>
+		<property name="itemService" ref="ItemService"></property>
+		<property name="productService" ref="ProductService"></property>
+	</bean> 
+
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="*" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	<aop:config>
+		<aop:pointcut id="allServiceMethod" expression="execution(* app.service.*.*(..))" />
+		<aop:advisor pointcut-ref="allServiceMethod" advice-ref="txAdvice" />
+	</aop:config>
+
+
+	
+	</beans>
