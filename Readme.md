@@ -1,6 +1,6 @@
 
 ![Aragaki_Yui_BG](https://github.com/yihleego/yihleego/blob/master/images/gakki_bg.jpg)
-![初めまして 私はりごです どうぞ よろしくお願いします。](https://github.com/yihleego/yihleego/blob/master/J2EE/myweb/WebRoot/images/head.jpg)#[http://YihLeego.com/](http://yihleego.com/)  or  [http://www.YihLeego.com/](http://www.yihleego.com/)
+#[http://YihLeego.com/](http://yihleego.com/)  or  [http://www.YihLeego.com/](http://www.yihleego.com/)![初めまして 私はりごです どうぞ よろしくお願いします。](https://github.com/yihleego/yihleego/blob/master/J2EE/myweb/WebRoot/images/head.jpg)
 
 * Java
 * J2EE(Jsp,Servlet,SSH)
