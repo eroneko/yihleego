@@ -37,7 +37,7 @@
 ![2](https://github.com/yihleego/yihleego/blob/master/images/BUG/2.jpg)
 ![3](https://github.com/yihleego/yihleego/blob/master/images/BUG/3.jpg)
 ![4](https://github.com/yihleego/yihleego/blob/master/images/BUG/4.jpg)
-![gakki](https://github.com/yihleego/yihleego/blob/master/images/gakki.gif =290x217)
+<img src="https://github.com/yihleego/yihleego/blob/master/images/gakki.gif" width=290 height=217 />
 ![4](https://github.com/yihleego/yihleego/blob/master/images/BUG/5.jpg)
 ![5](https://github.com/yihleego/yihleego/blob/master/images/BUG/6.jpg)
 ![6](https://github.com/yihleego/yihleego/blob/master/images/BUG/7.jpg)
